@@ -48,6 +48,9 @@ export const Navbar = () => {
             <Link to="/products">
               <Button variant="ghost">Products</Button>
             </Link>
+            <Link to="/blog">
+              <Button variant="ghost">Blog</Button>
+            </Link>
 
             {user ? (
               <>
