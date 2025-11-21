@@ -10,6 +10,9 @@ import { ProductsManagement } from "@/components/admin/ProductsManagement";
 import { OrdersManagement } from "@/components/admin/OrdersManagement";
 import { UsersManagement } from "@/components/admin/UsersManagement";
 import { BlogsManagement } from "@/components/admin/BlogsManagement";
+import PractitionersManagement from "@/components/admin/PractitionersManagement";
+import AppointmentsManagement from "@/components/admin/AppointmentsManagement";
+import ServicesManagement from "@/components/admin/ServicesManagement";
 import { toast } from "sonner";
 
 const Admin = () => {
@@ -64,11 +67,14 @@ const Admin = () => {
         <h1 className="text-4xl font-bold mb-8">Admin Panel</h1>
 
         <Tabs defaultValue="products" className="w-full">
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-7">
             <TabsTrigger value="products">Products</TabsTrigger>
             <TabsTrigger value="orders">Orders</TabsTrigger>
             <TabsTrigger value="users">Users</TabsTrigger>
             <TabsTrigger value="blogs">Blogs</TabsTrigger>
+            <TabsTrigger value="practitioners">Practitioners</TabsTrigger>
+            <TabsTrigger value="appointments">Appointments</TabsTrigger>
+            <TabsTrigger value="services">Services</TabsTrigger>
           </TabsList>
 
           <TabsContent value="products" className="mt-6">
@@ -85,6 +91,18 @@ const Admin = () => {
 
           <TabsContent value="blogs" className="mt-6">
             <BlogsManagement />
+          </TabsContent>
+
+          <TabsContent value="practitioners" className="mt-6">
+            <PractitionersManagement />
+          </TabsContent>
+
+          <TabsContent value="appointments" className="mt-6">
+            <AppointmentsManagement />
+          </TabsContent>
+
+          <TabsContent value="services" className="mt-6">
+            <ServicesManagement />
           </TabsContent>
         </Tabs>
       </div>

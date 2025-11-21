@@ -48,6 +48,9 @@ export const Navbar = () => {
             <Link to="/products">
               <Button variant="ghost">Products</Button>
             </Link>
+            <Link to="/clinic">
+              <Button variant="ghost">Clinic</Button>
+            </Link>
             <Link to="/blog">
               <Button variant="ghost">Blog</Button>
             </Link>
@@ -75,6 +78,10 @@ export const Navbar = () => {
                     <DropdownMenuItem onClick={() => navigate("/dashboard")}>
                       <LayoutDashboard className="mr-2 h-4 w-4" />
                       Dashboard
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => navigate("/my-appointments")}>
+                      <LayoutDashboard className="mr-2 h-4 w-4" />
+                      My Appointments
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => navigate("/admin")}>
                       <LayoutDashboard className="mr-2 h-4 w-4" />
